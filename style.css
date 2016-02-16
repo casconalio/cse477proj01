@@ -1,0 +1,16 @@
+html, body, header, footer, nav, article, section, figure,
+figcaption, h1, h2, h3, ul, li, body, div, p, img {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+}
+
+p {
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+input[type="text"] {
+    width: 3em;
+}

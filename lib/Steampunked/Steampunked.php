@@ -9,7 +9,7 @@
 namespace Steampunked;
 
 
-class Model
+class Steampunked
 {
 
 }

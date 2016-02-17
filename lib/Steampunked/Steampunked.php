@@ -11,17 +11,21 @@ namespace Steampunked;
 
 class Steampunked
 {
-    private $size;
-
+    private $size = 6;
     private $pipe=array();
-
+    private $random=array();
+    private $userpipe=array();
+    private $turn = false;
 
     public function __construct($seed = null) {
         if($seed === null) {
             $seed = time();
         }
         srand($seed);
+        $this->pipes();
+        $this->randomPipes();
 }
+
     public function pipes(){
         $this->pipe[] = new Tile("cap-e.png", array("N" => false, "W" => false, "S" => false, "E" => true));
         $this->pipe[] = new Tile("cap-n.png", array("N" => true, "W" => false, "S" => false, "E" => false));
@@ -40,7 +44,26 @@ class Steampunked
 
     }
     public function randomPipes(){
-
-
+        $this->random[] = $this->pipe[rand(0,count($this->pipe)-1)];
+        return $this->random;
+        for($i=0; $i < 5; $i++){
+            $this->userpipe[] = $this->randomPipes();
+        }
     }
+
+    public function getSize(){
+        return $this->size;
+    }
+
+    public function switchTurn(){
+        return $this->turn = True;
+    }
+    public function getPipe($name, $i){
+        foreach($this->pipe as $tile){
+
+
+        }
+    }
+
+
 }

@@ -11,5 +11,4 @@ namespace Steampunked;
 
 class View
 {
-
 }

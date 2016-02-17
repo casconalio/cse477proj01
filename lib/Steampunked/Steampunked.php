@@ -53,9 +53,14 @@ class Steampunked
         return $this->size;
     }
 
+    public function setSize($size){
+        $this->size = $size;
+    }
+
     public function switchTurn(){
         return $this->turn = True;
     }
+
     public function getPipe($name, $i){
         foreach($this->pipe as $tile){
 
@@ -64,9 +69,9 @@ class Steampunked
     public function addPipe(){
         
     }
+
     public function getUserPipes($i=0){
         return $this->userpipe;
     }
-
 
 }

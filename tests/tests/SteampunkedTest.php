@@ -12,7 +12,13 @@ class SteampunkedTest extends \PHPUnit_Framework_TestCase
 
 	public function test_construct() {
 		$steampunked = new Steampunked(self::SEED);
-		$this->assertEquals(23, $steampunked->getPipe());
+		$this->assertEquals(6,$steampunked->getSize());
+
+		$steampunked->setSize(4);
+		$this->assertEquals(4,$steampunked->getSize());
+
+		$this->assertContains(".png", $steampunked->getUserPipes()[0]->getName());
+		echo $steampunked->getUserPipes()[0]->getName();
 	}
 }
 

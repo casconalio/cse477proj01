@@ -1,5 +1,6 @@
 <?php
 require __DIR__ . '/lib/steampunked.inc.php';
+$steampunked = new \Steampunked\Steampunked();
 $view = new \Steampunked\View($steampunked);
 ?>
 <!doctype html>

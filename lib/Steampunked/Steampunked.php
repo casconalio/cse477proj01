@@ -61,17 +61,22 @@ class Steampunked
         $this->turn = !$this->turn;
     }
 
-    public function getPipe($name, $i){
-        foreach($this->pipe as $tile){
-
-        }
+    public function rotate($pipe){
+        $this->userpipe[$pipe] = $this->pipe[4];
     }
+
     public function addPipe(){
         
     }
 
-    public function getUserPipes($i=0){
-        return $this->userpipe;
+    public function getUserPipes($i=5){
+        if ($i < 5){
+            return $this->userpipe[$i];
+        }
+        else{
+            return $this->userpipe;
+        }
+
     }
 
 }

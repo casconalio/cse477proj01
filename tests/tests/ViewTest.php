@@ -14,6 +14,7 @@ class ViewTest extends \PHPUnit_Framework_TestCase
 		$view = new View($steampunked);
 		$html = $view->present();
 		$this->assertContains('pipe',$html);
+		$this->assertContains('Discard',$html);
 		$this->assertNotContains('invalid',$html);
 
 	}

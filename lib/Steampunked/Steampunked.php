@@ -58,7 +58,7 @@ class Steampunked
     }
 
     public function switchTurn(){
-        return $this->turn = True;
+        $this->turn = !$this->turn;
     }
 
     public function getPipe($name, $i){

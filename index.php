@@ -13,7 +13,6 @@ require __DIR__ . '/lib/steampunked.inc.php';
 
 <form>
     <fieldset class="grid">
-
     </fieldset>
 </form>
 <div class="player">

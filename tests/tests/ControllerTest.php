@@ -2,7 +2,6 @@
 require __DIR__ . "/../../vendor/autoload.php";
 
 /** @file
- * @brief Empty unit testing template
  * @cond 
  * @brief Unit tests for the Steampunked Controller class
  */

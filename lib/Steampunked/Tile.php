@@ -13,8 +13,9 @@ class Tile
 {
     private $name;
 
-    public function __construct($name)
+    public function __construct($name, $direction)
     {
+
         $this->name = $name;
     }
 

@@ -44,10 +44,8 @@ class Steampunked
 
     }
     public function randomPipes(){
-        $this->random[] = $this->pipe[rand(0,count($this->pipe)-1)];
-        return $this->random;
-        for($i=0; $i < 5; $i++){
-            $this->userpipe[] = $this->randomPipes();
+        while (count($this->userpipe) < 5){
+            $this->userpipe[] = $this->pipe[rand(0,count($this->pipe)-1)];
         }
     }
 
@@ -61,11 +59,13 @@ class Steampunked
     public function getPipe($name, $i){
         foreach($this->pipe as $tile){
 
-
         }
     }
     public function addPipe(){
         
+    }
+    public function getUserPipes($i=0){
+        return $this->userpipe;
     }
 
 

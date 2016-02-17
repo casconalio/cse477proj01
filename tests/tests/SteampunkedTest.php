@@ -2,14 +2,17 @@ Empty.php<?php
 require __DIR__ . "/../../vendor/autoload.php";
 
 /** @file
- * @brief Empty unit testing template
  * @cond 
  * @brief Unit tests for the Steampunked class
  */
+use Steampunked\Steampunked	as Steampunked;
 class SteampunkedTest extends \PHPUnit_Framework_TestCase
 {
-	public function test1() {
-		//$this->assertEquals($expected, $actual);
+	const SEED = 1234;
+
+	public function test_construct() {
+		$steampunked = new Steampunked(self::SEED);
+		$this->assertEquals(23, $steampunked->getPipe());
 	}
 }
 

@@ -11,9 +11,10 @@ figcaption, h1, h2, h3, ul, li, body, div, p, img {
     margin-bottom:1em;
 }
 fieldset{
-    width:23em;
-    height:23em;
+    width:360px;
+    height:360px;
     margin-left:24em;
+    padding:0;
 }
 .radio{
     margin-left:24em;
@@ -33,4 +34,16 @@ input[type="radio"]{
 }
 input[type="submit"]{
     margin:2em;
+}
+.blank{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+    padding: 30px;
+}
+.space{
+    padding-left:300px;
+    padding-bottom:0;
 }

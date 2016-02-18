@@ -15,7 +15,6 @@ class Tile
 
     public function __construct($name, $direction)
     {
-
         $this->name = $name;
     }
 

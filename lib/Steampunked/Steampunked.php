@@ -41,7 +41,7 @@ class Steampunked
         $this->pipe[] = new Tile("tee-nes.png", array("N" => true, "W" => false, "S" => true, "E" => true));
         $this->pipe[] = new Tile("tee-swn.png", array("N" => true, "W" => true, "S" => true, "E" => false));
         $this->pipe[] = new Tile("tee-wne.png", array("N" => true, "W" => true, "S" => false, "E" => true));
-
+        return $this->pipe;
     }
     public function randomPipes(){
         while (count($this->userpipe) < 5){

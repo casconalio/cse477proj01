@@ -79,6 +79,7 @@ class View
 </div>
 </form>';
 
+        
         $html .= '<div class="player"><p>Player 1, It\'s your turn!</p></div>';
 
         $pipes = $this->steampunked->getUserPipes();

@@ -15,7 +15,7 @@ class Steampunked
     private $pipe=array();
     private $random=array();
     private $userpipe=array();
-    private $turn = false;
+    private $turn = 1;
 
     public function __construct($seed = null) {
         if($seed === null) {
@@ -58,9 +58,16 @@ class Steampunked
     }
 
     public function switchTurn(){
-        $this->turn = !$this->turn;
+        if($this->turn==1) {
+            return $this->turn = 2;
+        }
+        else{
+            return $this->turn = 1;
+        }
     }
-
+    public function getturn(){
+        return $this->turn;
+    }
     public function rotate($pipe){
         $this->userpipe[$pipe] = $this->pipe[4];
     }

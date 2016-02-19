@@ -17,6 +17,7 @@ class View
     public function present(){
         $ar = $this->steampunked->pipes();
         $name = $ar[8]->getName();
+
         $beg = '<img class="pipe" src="images/';
         $end = '" width="60" height="60" alt="pipe image">';
         $image = $beg.$name.$end;
@@ -79,8 +80,8 @@ class View
 </div>
 </form>';
 
-
-        $html .= '<div class="player"><p>Player 1, It\'s your turn!</p></div>';
+        $turn  =$this->steampunked->getturn();
+        $html .= '<div class="player"><p>Player '.$turn.', It\'s your turn!</p></div>';
 
         $pipes = $this->steampunked->getUserPipes();
         $html .= '<div class="radio"><form action="../../steampunked-post.php">';

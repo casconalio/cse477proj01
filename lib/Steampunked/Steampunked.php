@@ -41,13 +41,11 @@ class Steampunked
         $this->pipe[] = new Tile("tee-nes.png", array("N" => true, "W" => false, "S" => true, "E" => true));
         $this->pipe[] = new Tile("tee-swn.png", array("N" => true, "W" => true, "S" => true, "E" => false));
         $this->pipe[] = new Tile("tee-wne.png", array("N" => true, "W" => true, "S" => false, "E" => true));
-
+        return $this->pipe;
     }
     public function randomPipes(){
-        $this->random[] = $this->pipe[rand(0,count($this->pipe)-1)];
-        return $this->random;
-        for($i=0; $i < 5; $i++){
-            $this->userpipe[] = $this->randomPipes();
+        while (count($this->userpipe) < 5){
+            $this->userpipe[] = $this->pipe[rand(0,count($this->pipe)-1)];
         }
     }
 
@@ -55,18 +53,30 @@ class Steampunked
         return $this->size;
     }
 
+    public function setSize($size){
+        $this->size = $size;
+    }
+
     public function switchTurn(){
-        return $this->turn = True;
+        $this->turn = !$this->turn;
     }
-    public function getPipe($name, $i){
-        foreach($this->pipe as $tile){
 
-
-        }
+    public function rotate($pipe){
+        $this->userpipe[$pipe] = $this->pipe[4];
     }
+
     public function addPipe(){
         
     }
 
+    public function getUserPipes($i=5){
+        if ($i < 5){
+            return $this->userpipe[$i];
+        }
+        else{
+            return $this->userpipe;
+        }
+
+    }
 
 }

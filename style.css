@@ -1,34 +1,61 @@
 html, body, header, footer, nav, article, section, figure,
-figcaption, h1, h2, h3, ul, li, body, div, p, img {
+figcaption, h1, h2, h3, ul, li, body, p {
     margin: 0;
     padding: 0;
     font-size: 100%;
     vertical-align: baseline;
     border: 0;
-}
-.title{
-    margin-left:17em;
-    margin-bottom:1em;
-}
-fieldset{
-    width:23em;
-    height:23em;
-    margin-left:24em;
-}
-.radio{
-    margin-left:24em;
 
 }
-.player{
-    font-size:2.5em;
+body{
     text-align: center;
+}
+
+.title{
+    margin-bottom:1em;
+}
+
+.game{
+    border-collapse:collapse;
+}
+div.row{
+    display:table-row;
+}
+div.game div.cell {
+    display: table-cell;
+    padding: 0;
+    width: 50px;
+    height: 50px;
+    border: 1px black solid;
+
+}
+div.cell input:hover{
+    background-color:skyblue;
+}
+div.cell input {
+    border: 0;
+    padding: 0;
+    margin:0;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+}
+
+div.game{
+    display:inline-block;
+    padding:0;
+    border:thin solid black;
+}
+
+
+.player{
+    font-size:2em;
 }
 input[type="radio"]{
     margin:1.5em;
-
-}
-.button{
-    margin-left:24em;
 
 }
 input[type="submit"]{
